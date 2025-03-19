@@ -59,7 +59,7 @@ const Contact = () => {
               <FaLinkedinIn />
             </a>
             <a
-              href=""
+              href="https://github.com/iamNanak"
               aria-label="GitHub"
               target="_blank"
               rel="noopener noreferrer"
@@ -83,7 +83,7 @@ const Contact = () => {
               <FaDiscord />
             </a>
             <a
-              href=""
+              href="https://mail.google.com/mail/?view=cm&fs=1&to=iamnanak01@gmail.com&su=Subject&body=Hello"
               aria-label="Discord"
               target="_blank"
               rel="noopener noreferrer"

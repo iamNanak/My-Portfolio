@@ -1,7 +1,7 @@
 import { FaLinkedinIn, FaGithub } from "react-icons/fa";
 import { FaSquareXTwitter, FaDiscord } from "react-icons/fa6";
 import { motion } from "framer-motion";
-import { MdEmail } from "react-icons/md";
+
 import { useRef } from "react";
 import emailjs from "@emailjs/browser";
 
@@ -27,7 +27,25 @@ const Contact = () => {
     confirm("Message Sent Successfully!");
   };
 
+  const iconVariants = {
+    initial: {
+      scale: 0.8,
+      opacity: 0,
+      x: "12.5%",
+      y: "6.25%",
+    },
+    whileInView: {
+      scale: 1,
+      opacity: 1,
+      x: 0,
+      y: 0,
+      transition: { duration: 0.5 },
+    },
+  };
+
   return (
+
+
     <section id="contact" className="mt-15">
       <div className="border-t border-stone-900 pb-15"></div>
       <motion.h2
@@ -37,6 +55,7 @@ const Contact = () => {
         className="text-center my-10 text-4xl"
       >
         Get in Touch
+
       </motion.h2>
       <div className="flex flex-col md:flex-row justify-center items-center gap-10">
         <div className="container mx-auto flex flex-col justify-center items-start">
@@ -50,46 +69,50 @@ const Contact = () => {
           </motion.h2>
 
           <div className="flex justify-start items-center mt-2 gap-4 text-2xl">
-            <a
-              href=""
+            <motion.a
+              variants={iconVariants}
+              initial="initial"
+              whileInView="whileInView"
+              href="https://www.linkedin.com/in/nanak-n-singh/"
               aria-label="LinkedIn"
               target="_blank"
               rel="noopener noreferrer"
             >
               <FaLinkedinIn />
-            </a>
-            <a
+            </motion.a>
+            <motion.a
+              variants={iconVariants}
+              initial="initial"
+              whileInView="whileInView"
               href="https://github.com/iamNanak"
               aria-label="GitHub"
               target="_blank"
               rel="noopener noreferrer"
             >
               <FaGithub />
-            </a>
-            <a
+            </motion.a>
+            <motion.a
+              variants={iconVariants}
+              initial="initial"
+              whileInView="whileInView"
               href=""
               aria-label="Twitter"
               target="_blank"
               rel="noopener noreferrer"
             >
               <FaSquareXTwitter />
-            </a>
-            <a
+            </motion.a>
+            <motion.a
+              variants={iconVariants}
+              initial="initial"
+              whileInView="whileInView"
               href=""
               aria-label="Discord"
               target="_blank"
               rel="noopener noreferrer"
             >
               <FaDiscord />
-            </a>
-            <a
-              href="https://mail.google.com/mail/?view=cm&fs=1&to=iamnanak01@gmail.com&su=Subject&body=Hello"
-              aria-label="Discord"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <MdEmail />
-            </a>
+            </motion.a>
           </div>
         </div>
 

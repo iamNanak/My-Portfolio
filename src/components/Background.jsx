@@ -3,19 +3,19 @@ import { motion } from "framer-motion";
 const circleVariants = {
   animate1: {
     scale: [1, 1.2, 1],
-    x: [0, 100, 0],
-    y: [0, 50, 0],
+    x: [0, 12.5, 0],
+    y: [0, 6.25, 0],
     transition: {
       duration: 2,
       repeat: Infinity,
       ease: "easeInOut",
     },
   },
-
+  
   animate2: {
-    scale: [1, 1.1, 1],
-    x: [0, 120, 0],
-    y: [0, -60, 0],
+    scale: [1, 1.1, 1],  
+    x: [0, 17.5, 0],
+    y: [0, 8.75, 0],
     transition: {
       duration: 2,
       repeat: Infinity,
@@ -23,19 +23,20 @@ const circleVariants = {
     },
   },
   animate3: {
-    scale: [1, 1.3, 1],
-    x: [0, 140, 0],
-    y: [0, 70, 0],
+    scale: [1, 1.15, 1],
+    x: [0, 35, 0],
+    y: [0, 17.5, 0],
     transition: {
       duration: 3,
       repeat: Infinity,
       ease: "easeInOut",
     },
   },
+
   animate4: {
-    scale: [1, 1.4, 1],
-    x: [0, 140, 0],
-    y: [0, -80, 0],
+    scale: [1, 1.1, 1],
+    x: [0, 17.5, 0],
+    y: [0, 10, 0],
     transition: {
       duration: 4,
       repeat: Infinity,
@@ -43,9 +44,9 @@ const circleVariants = {
     },
   },
   animate5: {
-    scale: [1, 1.5, 1],
-    x: [0, 180, 0],
-    y: [0, 90, 0],
+    scale: [1, 1.05, 1],
+    x: [0, 15, 0],
+    y: [0, 11.25, 0],
     transition: {
       duration: 3,
       repeat: Infinity,
@@ -53,9 +54,9 @@ const circleVariants = {
     },
   },
   animate6: {
-    scale: [1, 1.6, 1],
-    x: [0, 200, 0],
-    y: [0, -100, 0],
+    scale: [1, 1.15, 1],
+    x: [0, 25, 0],
+    y: [0, -12.5, 0],
     transition: {
       duration: 3,
       repeat: Infinity,

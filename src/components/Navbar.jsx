@@ -1,9 +1,19 @@
 import logo from "../assets/mylogo.webp";
 import { LINKS } from "../constants";
 import { RiCloseLine, RiMenu3Fill } from "react-icons/ri";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { motion, useAnimation } from "framer-motion";
 
 const Navbar = () => {
+
+  const controls = useAnimation();
+  useEffect(() => {
+    controls.start({
+      x: 0,
+      y: 0,
+      scale: 1,
+    });
+  }, [controls]);
   const [menuOpen, setMenuOpen] = useState(false);
 
   const handleLinkClick = () => {
@@ -26,19 +36,36 @@ const Navbar = () => {
           </a>
         </div>
 
-        <div className="hidden md:flex space-x-8">
+        <motion.div 
+           animate={controls}
+           initial={{ opacity: 0, scale: 0.8, x: "-25%", y:"-25%" }}
+           transition={{ duration: 0.5 }}
+           className="hidden md:flex space-x-8">
           {LINKS.map((link, index) => (
-            <a
-              href={link.href}
+            <motion.a
+              whileHover={{
+                scale: 1.1,
+                textShadow: "0px 0px 8px rgb(255,255,255)",
+                boxShadow: "0px 0px 8px rgb(255,255,255)",
+                transition: { duration: 0.3 },
+              }}
+              whileTap={{ scale: 0.9 }}
               key={index}
+              href={link.href}
               className="text-white hover:text-stone-400 transition duration-300"
             >
               {link.label}
-            </a>
+            </motion.a>
           ))}
-        </div>
+        </motion.div>
         <div className="md:hidden">
-          <button
+        <motion.button
+            whileHover={{
+              scale: 1.1,
+              transition: { duration: 0.3 },
+            }}
+            whileTap={{ scale: 0.9 }}
+          
             onClick={() => setMenuOpen(!menuOpen)}
             className="text-white focus:outline-none"
             aria-label={menuOpen ? "Close Menu" : "Open Menu"}
@@ -48,23 +75,35 @@ const Navbar = () => {
             ) : (
               <RiMenu3Fill className="w-6 h-6" />
             )}
-          </button>
+          
+            </motion.button>
         </div>
       </div>
 
       {menuOpen && (
-        <div className="md:hidden p-2 bg-stone-950/30 backdrop-blur-lg rounded-xl flex flex-col space-y-4 max-w-6xl mx-auto">
+        <motion.div 
+            initial={{ opacity: 0, scale: 0.8, x: "25%", y:"-25%" }}
+            transition={{ duration: 0.1 }}
+            animate={{ opacity: 1, scale: 1, x: 0, y:0 }}
+        className="md:hidden p-2 bg-stone-950/30 backdrop-blur-lg rounded-xl flex flex-col justify-center items-center space-y-4 max-w-6xl mx-auto">
           {LINKS.map((link, index) => (
-            <a
-              href={link.href}
-              key={index}
-              className="text-white hover:text-stone-400 transition duration-300 "
-              onClick={handleLinkClick}
-            >
-              {link.label}
-            </a>
+            <motion.a
+                whileHover={{
+                    scale: 1.1,
+                    textShadow: "0px 0px 8px rgb(255,255,255)",
+                    boxShadow: "0px 0px 8px rgb(255,255,255)",
+                    transition: { duration: 0.3 },
+                  }}
+                  whileTap={{ scale: 0.9 }}
+                key={index}
+                href={link.href}
+                className="text-white hover:text-stone-400 transition duration-300 "
+                onClick={handleLinkClick}
+              >
+                {link.label}
+              </motion.a>
           ))}
-        </div>
+        </motion.div>
       )}
     </nav>
   );

@@ -16,7 +16,7 @@ const Projects = () => {
         <motion.h2
           whileInView={{ opacity: 1, y: 0 }}
           initial={{ opacity: 0, y: -100 }}
-          transition={{ duration: 0.5 }}
+          transition={{ duration: 0.7 }}
           className="text-4xl text-center my-20"
         >
           Projects
@@ -27,8 +27,8 @@ const Projects = () => {
               {/* {console.log(PROJECTS.slice(0, visibleProjects))} */}
               <motion.div
                 whileInView={{ opacity: 1, x: 0 }}
-                initial={{ opacity: 0, x: -100 }}
-                transition={{ duration: 1 }}
+                initial={{ opacity: 0, x: -12.5, scale: 0.8 }}
+                transition={{ duration: 0.7, ease: "easeInOut" }}
                 className="w-full lg:w-1/4"
               >
                 <img
@@ -40,9 +40,9 @@ const Projects = () => {
                 />
               </motion.div>
               <motion.div
-                whileInView={{ opacity: 1, x: 0 }}
-                initial={{ opacity: 0, x: 100 }}
-                transition={{ duration: 1 }}
+                whileInView={{ opacity: 1, x: 0, scale:1}}
+                initial={{ opacity: 0, x: 12.5, scale: 0.8}}
+                transition={{ duration: 0.5 }}
                 className="w-full ml-5 max-w-xl lg:w-3/4"
               >
                 <h3 className="mb-2 font-semibold text-2xl">{project.title}</h3>

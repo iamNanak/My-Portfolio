@@ -3,17 +3,17 @@ import { HERO_CONTENT } from "../constants";
 import { motion } from "framer-motion";
 import { useTypewriter, Cursor } from "react-simple-typewriter";
 const containerVariants = {
-    hidden: {
-        opacity: 0,
-        scale: 0.8,
-        x: -12.5,
-    },
-    visible: {
-        opacity: 1,
-        scale: 1,
-        x: 0,
-        transition: { duration: 0.5, staggerChildren: 0.5 },
-    },
+  hidden: {
+    opacity: 0,
+    scale: 0.8,
+    x: -12.5,
+  },
+  visible: {
+    opacity: 1,
+    scale: 1,
+    x: 0,
+    transition: { duration: 0.5, staggerChildren: 0.5 },
+  },
 };
 
 const childVariants = {
@@ -32,7 +32,12 @@ const childVariants = {
 
 const Hero = () => {
   const [text] = useTypewriter({
-    words: ["Creative Developer", "Problem Solver", "Tech Enthusiast", "Full Stack Developer"],
+    words: [
+      "Creative Developer",
+      "Problem Solver",
+      "Tech Enthusiast",
+      "Full Stack Developer",
+    ],
     loop: true,
     typeSpeed: 20,
     deleteSpeed: 10,
@@ -64,18 +69,26 @@ const Hero = () => {
               variants={containerVariants}
               className="flex flex-col items-center lg:items-start mt-10"
             >
-              <motion.h2 variants={childVariants} className="pb-2 text-4xl trackicg-tighter lg:text-8xl">
+              <motion.h2
+                variants={childVariants}
+                className="pb-2 text-4xl trackicg-tighter lg:text-8xl"
+              >
                 Hi👋, I'm Nanak
               </motion.h2>
               <motion.span
                 variants={childVariants}
                 className="bg-gradient-to-r from-stone-300 to-stone-600 bg-clip-text text-3xl tracking-tight text-transparent"
               >
-                a {text} <Cursor cursorBlinking="false" cursorColor="#ffff" cursorStyle="|" />
+                a {text}{" "}
+                <Cursor
+                  cursorBlinking="false"
+                  cursorColor="#ffff"
+                  cursorStyle="|"
+                />
               </motion.span>
               <motion.p
                 variants={childVariants}
-                className="my-2 max-w-lg py-6 text-xl leading-relaxed tracking-tighter"
+                className="my-2 max-w-lg py-6 text-xl leading-relaxed tracking-tighter text-justify"
               >
                 {HERO_CONTENT}
               </motion.p>

@@ -40,7 +40,7 @@ const Navbar = () => {
           animate={controls}
           initial={{ opacity: 0, scale: 0.8, x: "-25%", y: "-25%" }}
           transition={{ duration: 0.1 }}
-          className=" text-white rounded-full md:flex space-x-8"
+          className=" text-white rounded-full md:flex space-x-8 hidden"
         >
           {LINKS.map((link, index) => (
             <motion.a

@@ -9,23 +9,24 @@ Driven by creativity and a problem-solving mindset, my goal is to leverage my gr
 export const ABOUT_TEXT = `I am a dedicated and versatile full stack developer with a passion for creating efficient and user-friendly web applications. With 5 years of professional experience, I have worked with a variety of technologies, including React, Next.js, Node.js, MySQL, PostgreSQL, and MongoDB. My journey in web development began with a deep curiosity for how things work, and it has evolved into a career where I continuously strive to learn and adapt to new challenges. I thrive in collaborative environments and enjoy solving complex problems to deliver high-quality solutions. Outside of coding, I enjoy staying active, exploring new technologies, and contributing to open-source projects.`;
 
 export const EXPERIENCES = [
+    {
+    year: "Aug 2025 - Present",
+    role: "SDET Intern",
+    company: "Josh Technology Group",
+      description: `Designed and developed user interfaces for web applications using Next.js and React. Worked closely with backend developers to integrate frontend components with Node.js APIs. Implemented responsive designs and optimized frontend performance.`,
+      technologies: ["Chrome", "Dev Tools", "Postman", "mySQL"],
+  },
   {
-    year: "2023 - Present",
-    role: "Independent Projects - 1",
-    company: "",
+    year: "Jan 2025 - Mar 2025",
+    role: "Software Developer Intern",
+    company: "Zidio Development",
     description: `The Chat App is a real-time messaging platform built to facilitate seamless communication between users. It features a clean and responsive user interface, robust backend architecture, and modern web technologies to deliver a smooth, real-time chat experience.`,
     technologies: ["React.js", "Node.js", "mongoDB", "Socket.IO"],
   },
+
   {
-    year: "",
-    role: "",
-    company: "Adobe",
-    description: `Designed and developed user interfaces for web applications using Next.js and React. Worked closely with backend developers to integrate frontend components with Node.js APIs. Implemented responsive designs and optimized frontend performance.`,
-    technologies: ["HTML", "CSS", "Vue.js", "mySQL"],
-  },
-  {
-    year: "",
-    role: "",
+    year: "Present",
+    role: "Independent Projects - 2",
     company: "",
     description: `Developed and maintained web applications using JavaScript, React.js, and Node.js. Designed and implemented RESTful APIs for data communication. Collaborated with cross-functional teams to deliver high-quality software products on schedule.`,
     technologies: ["Python", "Svelte", "Three.js", "Postgres"],
